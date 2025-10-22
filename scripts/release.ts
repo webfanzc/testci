@@ -4,7 +4,7 @@ import process from 'node:process'
 
 const { version: oldVersion } = JSON.parse(readFileSync('package.json', { encoding: 'utf8' }))
 
-execSync('bumpp --no-commit --no-tag --no-push', { stdio: 'inherit' })
+execSync('bumpp -r -a --no-commit --no-tag --no-push', { stdio: 'inherit' })
 
 const { version } = JSON.parse(readFileSync('package.json', { encoding: 'utf8' }))
 
