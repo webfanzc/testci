@@ -35,9 +35,9 @@
     "vite": "catalog:dev"
   },
   "dependencies": {
-    "@zelpis/builder": "workspace:*",
-    "@zelpis/render": "workspace:*",
-    "@zelpis/shared": "workspace:*"
+    "@webfanzc/builder": "workspace:*",
+    "@webfanzc/render": "workspace:*",
+    "@webfanzc/shared": "workspace:*"
   },
   "devDependencies": {
     "tsdown": "catalog:dev"

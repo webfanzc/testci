@@ -1,6 +1,6 @@
 import type { Root } from 'react-dom/client'
 import type { App } from 'vue'
-import { once } from '@zelpis/shared'
+import { once } from '@webfanzc/shared'
 
 interface BaseBootOption {
   type?: 'csr' | 'ssr'

@@ -1,1 +1,1 @@
-export * from '@zelpis/render/dsl'
+export * from '@webfanzc/render/dsl'

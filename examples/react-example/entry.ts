@@ -1,4 +1,4 @@
-import { boot } from '@zelpis/core'
+import { boot } from '@webfanzc/core'
 import { Button } from './custom-component/button'
 import { register, Root } from './remote-template'
 

@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "catalog:frontend",
-    "@zelpis/core": "workspace:*",
+    "@webfanzc/core": "workspace:*",
     "react": "catalog:frontend",
     "react-dom": "catalog:frontend",
     "react-router": "catalog:frontend"

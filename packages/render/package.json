@@ -1,5 +1,5 @@
 {
-  "name": "@zelpis/render",
+  "name": "@webfanzc/render",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -48,7 +48,7 @@
     }
   },
   "dependencies": {
-    "@zelpis/shared": "workspace:*",
+    "@webfanzc/shared": "workspace:*",
     "jiti": "catalog:dev",
     "ts-dedent": "catalog:dev"
   },

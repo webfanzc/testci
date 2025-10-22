@@ -6,12 +6,12 @@
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "paths": {
-      "@zelpis/shared": ["./packages/shared"],
-      "@zelpis/render": ["./packages/render"],
-      "@zelpis/render/*": ["./packages/render/*"],
-      "@zelpis/builder": ["./packages/builder"],
-      "@zelpis/builder/*": ["./packages/builder/*"],
-      "@zelpis/core": ["./packages/core"]
+      "@webfanzc/shared": ["./packages/shared"],
+      "@webfanzc/render": ["./packages/render"],
+      "@webfanzc/render/*": ["./packages/render/*"],
+      "@webfanzc/builder": ["./packages/builder"],
+      "@webfanzc/builder/*": ["./packages/builder/*"],
+      "@webfanzc/core": ["./packages/core"]
     },
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,

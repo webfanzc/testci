@@ -1,4 +1,4 @@
-import type { ZElpisConfig } from '@zelpis/builder'
+import type { ZElpisConfig } from '@webfanzc/builder'
 import type { Plugin } from 'vite'
 import fs from 'node:fs'
 import path from 'node:path'

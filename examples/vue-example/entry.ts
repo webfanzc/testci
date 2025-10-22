@@ -1,4 +1,4 @@
-import { boot } from '@zelpis/core'
+import { boot } from '@webfanzc/core'
 import App from './app.vue'
 import { router } from './router'
 

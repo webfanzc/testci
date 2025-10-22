@@ -26,8 +26,8 @@
     "vite": "catalog:dev"
   },
   "dependencies": {
-    "@zelpis/render": "workspace:*",
-    "@zelpis/shared": "workspace:*",
+    "@webfanzc/render": "workspace:*",
+    "@webfanzc/shared": "workspace:*",
     "fast-glob": "catalog:dev",
     "pkg-types": "catalog:dev",
     "ts-dedent": "catalog:dev"

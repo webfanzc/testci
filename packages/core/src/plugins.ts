@@ -1,2 +1,2 @@
-export { buildPlugin } from '@zelpis/builder'
-export * from '@zelpis/render/plugins'
+export { buildPlugin } from '@webfanzc/builder'
+export * from '@webfanzc/render/plugins'

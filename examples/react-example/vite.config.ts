@@ -1,7 +1,7 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import viteReact from '@vitejs/plugin-react'
-import { buildPlugin, renderPlugin } from '@zelpis/core/plugins'
+import { buildPlugin, renderPlugin } from '@webfanzc/core/plugins'
 import { defineConfig } from 'vite'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
