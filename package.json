@@ -1,0 +1,55 @@
+{
+  "name": "zelpis",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.17.0",
+  "description": "A DSL-driven frontend rendering framework",
+  "author": "",
+  "license": "MIT",
+  "keywords": [
+    "dsl",
+    "ssr",
+    "react",
+    "vue",
+    "vite"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "build": "pnpm -r --filter './packages/*' run build",
+    "dev": "pnpm -r --parallel --filter './packages/*' run dev",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp --all",
+    "lint": "eslint --cache .",
+    "prepublishOnly": "pnpm build"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:dev",
+    "@antfu/ni": "catalog:dev",
+    "@antfu/utils": "catalog:dev",
+    "@commitlint/cli": "catalog:dev",
+    "@commitlint/config-conventional": "catalog:dev",
+    "@types/node": "catalog:types",
+    "bumpp": "catalog:dev",
+    "eslint": "catalog:dev",
+    "esno": "catalog:dev",
+    "lint-staged": "catalog:dev",
+    "simple-git-hooks": "catalog:dev",
+    "taze": "catalog:dev",
+    "tsdown": "catalog:dev",
+    "typescript": "catalog:dev",
+    "vite": "catalog:dev",
+    "vitest": "catalog:dev"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "pnpm commitlint --edit $1"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
