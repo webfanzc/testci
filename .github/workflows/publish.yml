@@ -2,14 +2,8 @@ name: publish
 
 on:
   push:
-    branches:
-      - main
-
-  pull_request:
-    branches:
-      - main
-
-  merge_group: {}
+    tags:
+      - 'v*'
 
 permissions:
   id-token: write
@@ -66,7 +60,7 @@ jobs:
       - name: Typecheck
         run: pnpm run typecheck
 
-  release-pr:
+  publish:
     timeout-minutes: 20
     runs-on: ubuntu-latest
     steps:
@@ -88,4 +82,7 @@ jobs:
 
       - run: pnpm run build
 
-      - run: pnpm dlx pkg-pr-new publish --compact --pnpm './packages/*'
+      - name: Publish to npm
+        run: pnpm publish -r --access public --no-git-checks
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
