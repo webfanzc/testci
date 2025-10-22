@@ -1,7 +1,7 @@
 {
   "name": "zelpis",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "packageManager": "pnpm@10.17.0",
   "description": "A DSL-driven frontend rendering framework",
@@ -23,7 +23,7 @@
     "dev": "pnpm -r --parallel --filter './packages/*' run dev",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "release": "bumpp --all",
+    "release": "bumpp -a -r",
     "lint": "eslint --cache .",
     "prepublishOnly": "pnpm build"
   },
