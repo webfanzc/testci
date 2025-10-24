@@ -1,7 +1,7 @@
 {
   "name": "@webfanzc/builder",
   "type": "module",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
