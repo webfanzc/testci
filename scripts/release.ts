@@ -10,6 +10,7 @@ const { version } = JSON.parse(readFileSync('package.json', { encoding: 'utf8' }
 
 if (oldVersion === version) {
   console.log('version error')
+
   process.exit()
 }
 
