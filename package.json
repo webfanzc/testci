@@ -4,7 +4,7 @@
   "version": "1.0.14",
   "private": true,
   "packageManager": "pnpm@10.17.0",
-  "description": "A DSL-driven frontend rendering framework",
+  "description": "A DSL-driven frontend rendering framework ",
   "author": "",
   "license": "MIT",
   "keywords": [
