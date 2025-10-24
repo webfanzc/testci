@@ -19,7 +19,6 @@ export function createTsdownConfig(options: {
       'vite',
       'express',
       /^node:/,
-      /^@webfanzc\//,
       ...(options.external || []),
     ],
   })
