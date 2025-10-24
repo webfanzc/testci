@@ -27,6 +27,9 @@
     "lint": "eslint --cache .",
     "prepublishOnly": "pnpm build"
   },
+  "dependencies": {
+    "@webfanzc/core": "catalog:"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:dev",
     "@antfu/ni": "catalog:dev",

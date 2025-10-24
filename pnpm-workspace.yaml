@@ -3,7 +3,8 @@ packages:
   - examples/*
   - docs
 
-catalog: null
+catalog:
+  '@webfanzc/core': ^1.0.10
 
 catalogs:
   dev:

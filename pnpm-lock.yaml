@@ -137,6 +137,10 @@ catalogs:
 importers:
 
   .:
+    dependencies:
+      '@webfanzc/core':
+        specifier: ^1.0.10
+        version: 1.0.10(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.6(@types/node@22.18.6)(jiti@2.6.1)(tsx@4.20.5)(yaml@2.8.1))(vue@3.5.21(typescript@5.9.2))
     devDependencies:
       '@antfu/eslint-config':
         specifier: catalog:dev
@@ -1597,6 +1601,34 @@ packages:
     resolution: {integrity: sha512-e89uuTLMh0U5cZ9iDpEI2senqPGfbPRTHM/0AaQkcxnpqjkZqDYP8rpfm7edOz8s+pOCOROEy1PIveSW8+fL5g==}
     peerDependencies:
       vue: ^3.5.0
+
+  '@webfanzc/builder@1.0.10':
+    resolution: {integrity: sha512-tEM8DVo2Gn2l3kVERyr2Vp/8yoO0YFdzqe60UJ51p04H3l5MlctMefSPKZu8Vc+Eppg7qSzMQlZ6yrwXp42w9w==}
+    peerDependencies:
+      vite: ^7.1.6
+
+  '@webfanzc/core@1.0.10':
+    resolution: {integrity: sha512-Dpoydo4MTDKw47acOewVNhy34FVwZencGPHAbfCitxtpdxUPUWQ1zzwjLioShWM0Q6qOfFVrz7JdBwp7bodu1w==}
+    peerDependencies:
+      vite: ^7.1.6
+
+  '@webfanzc/render@1.0.10':
+    resolution: {integrity: sha512-pgIcrmxxy2Jb46e8x7CnzDX+dPsQA+EjGr6FNNO/xhbU7M+5zYDG3NGIS85wZgbE1eyvqqPXgRc5tuqZ60xMcw==}
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+      vite: ^7.1.6
+      vue: '>=3'
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+      vue:
+        optional: true
+
+  '@webfanzc/shared@1.0.10':
+    resolution: {integrity: sha512-xxXFY33tE3qDnkqr0UyvnoI5wS3DmBsitpOGkQasKh4OzBX87sJ8504rO1MBijiD2VUVJ0aP5fbAiDuRJerYVA==}
 
   JSONStream@1.3.5:
     resolution: {integrity: sha512-E+iruNOY8VV9s4JEbe1aNEm6MiszPRr/UfcHMz0TQh1BXSxHK+ASV1R6W4HpjBhSeS+54PIsAMCBmwD06LLsqQ==}
@@ -5096,6 +5128,43 @@ snapshots:
   '@vueuse/shared@13.9.0(vue@3.5.21(typescript@5.9.2))':
     dependencies:
       vue: 3.5.21(typescript@5.9.2)
+
+  '@webfanzc/builder@1.0.10(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.6(@types/node@22.18.6)(jiti@2.6.1)(tsx@4.20.5)(yaml@2.8.1))(vue@3.5.21(typescript@5.9.2))':
+    dependencies:
+      '@webfanzc/render': 1.0.10(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.6(@types/node@22.18.6)(jiti@2.6.1)(tsx@4.20.5)(yaml@2.8.1))(vue@3.5.21(typescript@5.9.2))
+      '@webfanzc/shared': 1.0.10
+      fast-glob: 3.3.3
+      pkg-types: 2.3.0
+      ts-dedent: 2.2.0
+      vite: 7.1.6(@types/node@22.18.6)(jiti@2.6.1)(tsx@4.20.5)(yaml@2.8.1)
+    transitivePeerDependencies:
+      - react
+      - react-dom
+      - vue
+
+  '@webfanzc/core@1.0.10(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.6(@types/node@22.18.6)(jiti@2.6.1)(tsx@4.20.5)(yaml@2.8.1))(vue@3.5.21(typescript@5.9.2))':
+    dependencies:
+      '@webfanzc/builder': 1.0.10(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.6(@types/node@22.18.6)(jiti@2.6.1)(tsx@4.20.5)(yaml@2.8.1))(vue@3.5.21(typescript@5.9.2))
+      '@webfanzc/render': 1.0.10(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.6(@types/node@22.18.6)(jiti@2.6.1)(tsx@4.20.5)(yaml@2.8.1))(vue@3.5.21(typescript@5.9.2))
+      '@webfanzc/shared': 1.0.10
+      vite: 7.1.6(@types/node@22.18.6)(jiti@2.6.1)(tsx@4.20.5)(yaml@2.8.1)
+    transitivePeerDependencies:
+      - react
+      - react-dom
+      - vue
+
+  '@webfanzc/render@1.0.10(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.1.6(@types/node@22.18.6)(jiti@2.6.1)(tsx@4.20.5)(yaml@2.8.1))(vue@3.5.21(typescript@5.9.2))':
+    dependencies:
+      '@webfanzc/shared': 1.0.10
+      jiti: 2.6.1
+      ts-dedent: 2.2.0
+      vite: 7.1.6(@types/node@22.18.6)(jiti@2.6.1)(tsx@4.20.5)(yaml@2.8.1)
+    optionalDependencies:
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+      vue: 3.5.21(typescript@5.9.2)
+
+  '@webfanzc/shared@1.0.10': {}
 
   JSONStream@1.3.5:
     dependencies:
