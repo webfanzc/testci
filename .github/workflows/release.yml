@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  id-token: write
 
 jobs:
   release:
@@ -34,15 +35,7 @@ jobs:
         id: version
         run: echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
 
-      - run: npx changelogithub --no-group
-        continue-on-error: true
+      - name: Generate Changelog and Create Release
+        run: pnpx changelogithub --no-group
         env:
-          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
-
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: v${{ steps.version.outputs.version }}
-          name: v${{ steps.version.outputs.version }}
-          body: Release v${{ steps.version.outputs.version }}
-          generate_release_notes: true
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
