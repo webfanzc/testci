@@ -1,7 +1,7 @@
 {
   "name": "@webfanzc/shared",
   "type": "module",
-  "version": "1.0.18",
+  "version": "1.0.20",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
