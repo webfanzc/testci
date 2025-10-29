@@ -19,29 +19,15 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: "Guard: ensure tag commit is on main"
-        id: guard
-        shell: bash
-        run: |
-          git fetch origin main --depth=1
-          if git merge-base --is-ancestor "$GITHUB_SHA" origin/main; then
-            echo "on_main=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "on_main=false" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Install pnpm
         uses: pnpm/action-setup@v4
-        if: steps.guard.outputs.on_main == 'true'
 
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
           cache: pnpm
-        if: steps.guard.outputs.on_main == 'true'
 
       - name: Generate Changelog and Create Release
         run: pnpx changelogithub
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        if: steps.guard.outputs.on_main == 'true'
