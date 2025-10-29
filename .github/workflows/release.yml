@@ -20,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Guard: ensure tag commit is on main
+      - name: "Guard: ensure tag commit is on main"
         id: guard
         run: |
           git fetch origin main --depth=1
