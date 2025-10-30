@@ -33,5 +33,5 @@ jobs:
 
       - run: pnpm run build
 
-      - run: pnpm dlx pkg-pr-new publish
+      - run: pnpm dlx pkg-pr-new publish --compact --pnpm './packages/*'
 
