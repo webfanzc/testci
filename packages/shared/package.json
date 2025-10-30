@@ -4,7 +4,7 @@
   "version": "1.0.31",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webfanzc/testci.git",
+    "url": "https://github.com/webfanzc/testci",
     "directory": "packages/shared"
   },
   "exports": {
