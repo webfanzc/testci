@@ -2,6 +2,11 @@
   "name": "@webfanzc/builder",
   "type": "module",
   "version": "1.0.30",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webfanzc/testci.git",
+    "directory": "packages/builder"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
