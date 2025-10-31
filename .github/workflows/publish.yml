@@ -54,3 +54,8 @@ jobs:
           
           git tag -f "v$VERSION" $COMMIT_SHA
           git push origin "v$VERSION" --force
+
+      - name: Generate Changelog
+        run: pnpx changelogithub
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
